@@ -40,24 +40,7 @@ interface FormErrorValues {
   addAComment?: string;
 }
 const validation = (values) => {
-  const errors: FormErrorValues = {
-    file: null,
-    vendor: "",
-    purchaseOrderNumber: "",
-    invoiceNumber: "",
-    invoiceDate: "",
-    totalAmount: "",
-    paymentTerms: "",
-    invoiceDueDate: "",
-    gLPostDate: "",
-    invoiceDescription: "",
-    lineAmount: "",
-    department: "",
-    amount: "",
-    location: "",
-    description: "",
-    addAComment: "",
-  };
+  const errors: FormErrorValues = {};
 
   if (!values.file) {
     errors.file = "Required";
