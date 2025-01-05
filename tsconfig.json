@@ -1,26 +1,79 @@
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "lib": ["dom", "dom.iterable", "esnext"],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": false,
+//     "noEmit": true,
+//     "jsx": "react-jsx"
+//   },
+//   "include": ["src"]
+// }
+
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "noFallthroughCasesInSwitch": false,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      // "@containers/*": [
+      //   "./src/containers/*"
+      // ],
+      // "@redux/*": [
+      //   "./src/redux/*"
+      // ],
+      "@components/*": ["./src/components/*"],
+      // "@hooks/*": [
+      //   "./src/hooks/*"
+      // ],
+      // "@hooks": [
+      //   "./src/hooks/index"
+      // ],
+      "@theme/*": ["./src/theme/*"]
+      // "@utils/*": [
+      //   "./src/utils/*"
+      // ],
+      // "@assets/*": [
+      //   "./src/assets/*"
+      // ],
+      // "@uikit/*": [
+      //   "./src/uikit/*"
+      // ],
+      // "@uikit": [
+      //   "./src/uikit/index"
+      // ],
+      // "@constants/*": [
+      //   "./src/constants/*"
+      // ],
+      // "@constants": [
+      //   "./src/constants/index"
+      // ],
+    }
   },
-  "include": [
-    "src"
-  ]
+  "ignorePatterns": ["scripts/"],
+  "exclude": ["scripts"],
+  "include": ["src", "public/websocket.js"]
 }
